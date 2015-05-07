@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Everything Node.js</title>
+
+    <meta name="description" content="Introduction to node.js and why node.js matters">
+    <meta name="author" content="Christoph Walcher">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/colorful_black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>Everything <span class="accent">Node.js</span></h1>
+        </section>
+
+        <section>
+            <h1 class="calm">ME</h1>
+            <h3>Christoph Walcher</h3>
+            <h3><span class="accent">@saintedlama</span></h3>
+            <p>http://www.meetup.com/nodejs-vienna/</p>
+        </section>
+
+        <section>
+            <h1><span class="accent">Evented</span> Javascript on the <span class="accent">Server</span></h1>
+
+            <h1><span class="calm">Asynchronous</span></h1>
+
+            <h1>Single Process</h1>
+        </section>
+
+        <section>
+            <h1>Small footprint <span class="accent">memory</span> <span class="calm">file system</span></h1>
+        </section>
+
+        <section>
+            <h2>
+                <span class="accent">Linux, OS X, Windows</span>
+                <span class="calm">raspberry pi, tessel.io, espruino, tinkerforge red brick</span>
+                <span class="indicate">aws, heroku, open shift, ...</span>
+            </h2>
+        </section>
+
+        <section>
+            <pre><code data-trim>
+var http = require('http');
+
+var server = http.createServer(function(req, res) {
+    res.write('Hello World');
+    res.end();
+});
+
+server.listen(8080, function() {
+    console.log('listening for requests on port 8080');
+});
+            </code></pre>
+        </section>
+
+        <section>
+            <h1>You’re probably using <span class="accent">Node.js</span></h1>
+        </section>
+
+        <section>
+            <h2><span class="calm">Grunt</span>
+                Gulp
+                <span class="accent">Bower</span>
+                WebPack <span class="accent">Atom</span>
+                <span class="indicate">Slack</span>
+                VS Code
+                <span class="indicate">Yeoman</span>
+                <span class="calm">Game Dev Tycoon</span>
+                Popcorn Time
+                <span class="accent">Azure Mobile Services</span>
+            </h2>
+        </section>
+
+        <section>
+            <h1><span class="accent">My story</span> about node.js</h1>
+        </section>
+
+        <section>
+            <h1>I was doing <span class="calm">strong typed</span> languages for <span class="accent">15</span> years</h1>
+        </section>
+
+        <section>
+            <h1><span class="indicate">Hated</span> weak typing</h1>
+        </section>
+
+        <section>
+            <h1><span class="indicate">But</span> had the feeling that JavaScript is <span class="accent">eating the world</span></h1>
+        </section>
+
+        <section>
+            <h1>Bought a book: <span class="calm">JavaScript</span>: <span class="accent">The good parts</span> in 2011</h1>
+        </section>
+
+        <section>
+            <h1>Installed node.js Version <span class="accent">0.4.12</span> (stable), released <span class="accent">2011.09.15</span></h1>
+        </section>
+
+        <section>
+            <h1 class="indicate">It was awful!</h1>
+        </section>
+
+        <section>
+            <h1>I did <span class="indicate">not test</span> anything</h1>
+            <h1>Every change <span class="indicate">broke</span> everything.</h1>
+        </section>
+
+        <section>
+            <h1 class="indicate">Everytime</h1>
+        </section>
+
+        <section>
+            <h1>I was doing <span class="indicate">OOP</span> at it's best and hated JavaScript for it's <span class="accent">prototype chains</span></h1>
+        </section>
+
+        <section>
+            <h1 class="indicate">It was a mess.</h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Node.js</span> did not like me. I did not like <span class="accent">node.js</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">3,5</span> years <span class="accent">later</span> </h1>
+            <h1><span class="calm">I'm</span> doing a super secret <span class="calm">startup</span> with <span class="accent">node.js</span></h1>
+        </section>
+
+        <section data-background="#333">
+            <h1><span class="calm">What</span> happened?</h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">What</span> makes node.js <span class="accent">awesome</span>?</h1>
+        </section>
+
+        <section>
+            <h1 class="accent">Scalability</h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Thread safe</span> by design</h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Graceful</span> under load</h1>
+        </section>
+
+        <section>
+            <h1 class="accent">NPM</h1>
+        </section>
+
+        <section>
+            <h1>Dependencies done <span class="calm">right</span></h1>
+            <h1>Less <span class="indicate">version hell</span> than ever</h1>
+        </section>
+
+        <section>
+            <h1 class="accent">One language</h1>
+        </section>
+
+        <section>
+            <h2>
+                <span class="accent">Awesome applications</span> are not written by a <span class="indicate">frontend</span> team or a
+                <span class="indicate">backend</span> team but by a <span class="calm">developer team</span>!
+            </h2>
+        </section>
+
+        <section>
+            <h1>Breaking <span class="indicate">silos</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">but</span> </h1>
+            <h1>different <span class="accent">non-functional</span> requirements</h1>
+        </section>
+
+        <section>
+            <h1>Rapid <span class="accent">Development</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">No need</span> to deploy to <span class="indicate">application servers</span></h1>
+        </section>
+
+        <section>
+            <h1>Start a <span class="calm">server</span> in <span class="accent">seconds</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Develop</span> REST APIs <span class="indicate">without</span> spending 4 days with <span class="calm">infrastructure</span> stuff</h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">Integration</span> tests run within <span class="accent">seconds</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Vibrant</span> community</h1>
+        </section>
+
+        <section>
+            <h2><span class="accent">Late 2012</span></h2>
+            <h2><span class="calm">15k</span> modules, <span class="calm">10m</span> downloads/month</h2>
+            <h2><span class="accent">Late 2014</span></h2>
+            <h2><span class="calm">100k+</span> modules, <span class="calm">&gt; 500m</span> downloads/month</h2>
+        </section>
+
+        <section>
+            <h1><span class="calm">Module philosophy</span> Do <span class="accent">one</span> thing</h1>
+            <h1>But do it <span class="accent">well!</span></h1>
+        </section>
+
+        <section>
+            <h1 class="indicate">What still sucks</h1>
+        </section>
+
+        <section>
+            <h1><span class="indicate">Error handling</span> is a mess with callbacks</h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">JavaScript</span> is a bit <span class="indicate">meh</span></h1>
+            <h1>But not as <span class="accent">meh</span> as <span class="calm">JavaScript</span> <span class="indicate">haters</span> believe</h1>
+        </section>
+
+        <section>
+            <h1><span class="calm">Asynchronous</span> nature can be <span class="indicate">cumbersome</span></h1>
+        </section>
+
+        <section>
+            <h1><span class="accent">Node.js</span> is no <span class="calm">silver bullet</span></h1>
+        </section>
+
+        <section>
+            <h1>It does <span class="indicate">not</span> solve the <span class="calm">hard parts</span> of software <span class="accent">development</span></h1>
+        </section>
+
+        <section>
+            <h2><span class="accent">Understanding</span> the problem domain</h2>
+            <h2>Building the <span class="accent">right software</span></h2>
+            <h2><span class="calm">Teamwork</span> and <span class="calm">Cooperation</span></h2>
+        </section>
+
+        <section data-background="#fff">
+            <h1 class="calm">Thanks!</h1>
+        </section>
+
+        <section data-background="#fff">
+            <h1>Getting <span class="calm">MEAN</span> in 90 minutes</h1>
+            <h1><span class="calm">Nodeschool</span></h1>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() { return !!document.querySelector('pre code'); },
+                callback: function() { hljs.initHighlightingOnLoad(); }
+            },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
